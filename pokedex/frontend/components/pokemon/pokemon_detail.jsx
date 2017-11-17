@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import ItemDetailContainer from '../items/item_detail_container';
+import PokemonFormContainer from './pokemon_form_container';
+
 
 class PokemonDetail extends React.Component {
   constructor(props) {
@@ -19,7 +21,7 @@ class PokemonDetail extends React.Component {
   }
 
   render() {
-    // debugger
+
     if (!this.props.pokemon) {
       return (
         <div></div>
@@ -50,6 +52,7 @@ class PokemonDetail extends React.Component {
           };
         </ul>
         <Route path="/pokemon/:id/item/:itemId" component={ItemDetailContainer} />
+
       </section>
     );
   }
